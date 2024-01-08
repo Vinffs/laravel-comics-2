@@ -1,0 +1,240 @@
+@use "./partials/variables" as *;
+
+$fa-font-path: "../webfonts" !default;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import "~bootstrap/scss/bootstrap";
+
+header {
+    margin-top: 1em;
+    background-color: $color_white;
+
+    img {
+        padding: 1em 0 1.5em 0;
+    }
+
+    li {
+        padding: 4.2em 0.8em;
+        font-size: 0.9em;
+        font-weight: bold;
+
+        &.activePage,
+        &:hover {
+            color: $color_primary;
+            padding-bottom: 15px;
+            border-bottom: 5px solid $color_primary;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color_black;
+        }
+
+        &.activePage a,
+        &:hover a {
+            color: $color_primary;
+        }
+    }
+}
+
+#hero {
+    position: relative;
+    background-image: url("../images/jumbotron.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+}
+
+#comics {
+    background-color: $color_black;
+    padding: 2.5em 0;
+    position: relative;
+
+    #loadMore {
+        width: 15% !important;
+        padding: 0.5em 1.5em;
+        font-size: 1em;
+        font-weight: bold;
+        color: $color_white;
+        background-color: $color_primary;
+        border: none;
+        margin-top: 1em;
+    }
+
+    #currentSeries {
+        background-color: $color_primary;
+        color: $color_white;
+        position: absolute;
+        top: -25px;
+        left: 605px;
+        padding: 0.5em 1.5em;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    h3 {
+        color: $color_white;
+    }
+
+    .card {
+        background-color: $color_black !important;
+        height: 300px;
+
+        img {
+            object-position: top;
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        h5 {
+            color: $color_white !important;
+            padding: 0.5em 0 !important;
+            margin: 0;
+            font-size: 1em;
+            text-wrap: balance;
+            word-wrap: normal;
+        }
+    }
+}
+
+#features {
+    padding: 3em 0;
+    background-color: $color_primary;
+
+    img {
+        width: 70px;
+    }
+
+    .sectionText {
+        color: $color_white;
+        padding-left: 0.5em;
+    }
+
+    #sectionContainer {
+        max-width: 1200px;
+
+        & > div:nth-child(4) img {
+            width: 50px;
+        }
+    }
+}
+
+#footerList {
+    background-image: url("../images/footer-bg.jpg");
+    background-size: cover;
+
+    ul {
+        margin: 0 !important;
+        padding: 0 2.5em 0 0 !important;
+        list-style: none;
+    }
+
+    .headerList {
+        color: $color_white;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding-bottom: 0.5em;
+    }
+
+    #identifier > ul:last-child {
+        padding-top: 1em !important;
+    }
+
+    .footerPadding {
+        padding: 3em 0 5em 0.75em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color_lightgrey;
+    }
+
+    #imgContainer {
+        background-image: url("../images/dc-logo-bg.png");
+        background-position-y: -110px;
+        background-size: cover;
+        width: 50%;
+        margin: 0;
+    }
+}
+
+#bottomFooter {
+    background-color: $color_secondary;
+
+    button {
+        background-color: $color_secondary;
+        color: $color_white;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 2px solid $color_primary;
+        padding: 0.5em 1em;
+        border-radius: 0 !important;
+    }
+
+    li {
+        padding: 0 0.5em;
+    }
+
+    ul {
+        margin: 0 !important;
+
+        & > li:first-child {
+            color: $color_primary;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+}
+
+#showComic {
+    #blueLine {
+        height: 100px;
+        background-color: $color_primary;
+
+        .imgPosterContainer {
+            position: relative;
+
+            .imagePoster {
+                position: absolute;
+                left: 0;
+                top: -220px;
+                height: 300px;
+                width: 200px;
+                border: 1px solid black;
+            }
+        }
+    }
+
+    .descriptionComic {
+        text-wrap: wrap;
+        padding: 1em 0;
+    }
+
+    .adv {
+        margin: 0 !important;
+        font-size: 1em;
+    }
+    #bar {
+        background-color: #55ba59;
+        border-bottom: 1px solid black;
+        color: $color_white;
+
+        .availableBox {
+            border-left: 1px solid black;
+        }
+    }
+
+    #specs {
+        background-color: #f6f6f6;
+        padding: 2em 0 4em 0;
+
+        .seriesName {
+            color: $color_primary;
+        }
+    }
+}
