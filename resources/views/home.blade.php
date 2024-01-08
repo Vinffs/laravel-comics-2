@@ -6,7 +6,7 @@
 
     @include('partials.hero')
     <main>
-        @include('partials.comics')
+        @include('comics.index')
         @include('partials.features')
     </main>
 

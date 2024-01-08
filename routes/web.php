@@ -19,16 +19,16 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('/comic/{id}', function ($id) {
-    $comics = config('comics.comics');
+// Route::get('/comic/{id}', function ($id) {
+//     $comics = config('comics.comics');
 
-    if ($id >= 0 && $id < count($comics)) {
-        $comic = $comics[$id];
+//     if ($id >= 0 && $id < count($comics)) {
+//         $comic = $comics[$id];
 
-        return view('show', compact('comic'));
-    } else {
-        abort(404);
-    }
-})->name('show');
+//         return view('show', compact('comic'));
+//     } else {
+//         abort(404);
+//     }
+// })->name('show');
 
 Route::resource('comics', ComicController::class);
