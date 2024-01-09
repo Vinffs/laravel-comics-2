@@ -15,7 +15,7 @@ return [
         ],
         [
             "sectionTitle" => "COMICS",
-            "url" => "comics",
+            "url" => "/comics",
             "name" => "comics",
             "active" => true,
         ],

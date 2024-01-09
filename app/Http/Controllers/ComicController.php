@@ -21,11 +21,11 @@ class ComicController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -35,6 +35,16 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $formData = $request->all();
+        $newComic = new Comic();
+        $newComic->title = $formData['title'];
+        $newComic->description = $formData['description'];
+        $newComic->price = $formData['price'];
+        $newComic->series = $formData['series'];
+        $newComic->sale_date = $formData['sale_date'];
+        $newComic->type = $formData['type'];
+        $newComic->save();
+        return to_route('comics.index');
     }
 
     /**
