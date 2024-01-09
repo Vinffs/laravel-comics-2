@@ -2,6 +2,12 @@
 return [
     'navbar' => [
         [
+            "sectionTitle" => "HOME",
+            "url" => "/",
+            "name" => "home",
+            "active" => false,
+        ],
+        [
             "sectionTitle" => "CHARACTERS",
             "url" => "#",
             "name" => "characters",
@@ -9,8 +15,8 @@ return [
         ],
         [
             "sectionTitle" => "COMICS",
-            "url" => "/",
-            "name" => "home",
+            "url" => "comics",
+            "name" => "comics",
             "active" => true,
         ],
         [

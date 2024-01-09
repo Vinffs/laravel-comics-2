@@ -7,13 +7,24 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Installazione Laravel
+# LARAVEL COMICS 
 
-Create un nuovo progetto Laravel. <br>
+## Milestone 1
+Tramite gli appositi comandi artisan create un model con relativa migration e seeder e resource controller.
+Editate la resource route
 
-Concentratevi sul layout: <br>
-- create un file di layout in cui inserire la struttura comune di tutte le pagine del sito web (tag head, tag body, ...) eventualmente includendo header e footer tramite due partials. <br>
-- Create poi una rotta per visualizzare la lista di tutti i fumetti recuperati da un file inserito nella cartella config e abbellite il tutto sfruttando Sass.
+## Milestone 2
+Iniziate a definire le prime operazioni CRUD con le relative view dove necessarie:
+- index()
+- show()
+- create()
+- store() (solo dump dei dati)
 
-## Bonus:
-Create più pagine istituzionali che condividono lo stesso layout (utilizzando il routing)
+## Bonus 1:
+Procedere con il salvataggio dei dati sul db
+
+## Milestone 3
+oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD.
+
+## Bonus 2:
+Aggiungere validazioni e messaggi di errore e alla cancellazione messaggio di conferma all'utente

@@ -6,10 +6,7 @@
 
     @include('partials.hero')
     <main>
-        @php
-            dd($comics);
-        @endphp
-        {{-- <section id="comics" class="d-flex justify-content-center">
+        <section id="comics" class="d-flex justify-content-center">
             <button id='currentSeries'>CURRENT SERIES</button>
             <div class="row container justify-content-center">
                 @foreach ($comics as $comic)
@@ -21,13 +18,13 @@
                             <div class=" card-body d-flex p-0 pt-2 mx-auto">
                                 <h5 class="text-center">{{ $comic->title }}</h5>
                             </div>
-                            <a class="btn-primary btn" href="{{ route('show', $comic->id) }}">See Details</a>
+                            {{-- <a class="btn-primary btn" href="{{ route('show', $comic->id) }}">See Details</a> --}}
                         </div>
                     </div>
                 @endforeach
                 <button id="loadMore">LOAD MORE</button>
             </div>
-        </section> --}}
+        </section>
         @include('partials.features')
     </main>
 
