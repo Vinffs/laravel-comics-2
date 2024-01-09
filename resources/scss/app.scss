@@ -49,11 +49,7 @@ header {
     height: 40vh;
 }
 
-#comics {
-    background-color: $color_black;
-    padding: 2.5em 0;
-    position: relative;
-
+#mainContent {
     #loadMore {
         width: 15% !important;
         padding: 0.5em 1.5em;
@@ -64,6 +60,11 @@ header {
         border: none;
         margin-top: 1em;
     }
+}
+#comics {
+    background-color: $color_black;
+    padding: 2.5em 0;
+    position: relative;
 
     #currentSeries {
         background-color: $color_primary;

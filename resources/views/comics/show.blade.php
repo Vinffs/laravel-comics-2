@@ -14,7 +14,15 @@
         <section id="comicInfo" class="container py-5">
             <div class="row">
                 <div class="col-9 p-0 pe-5">
-                    <h2 class="pb-3">{{ $comic->title }}</h2>
+                    <div class="d-flex justify-content-between">
+                        <h2 class="pb-3">{{ $comic->title }}</h2>
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Remove</button>
+                        </form>
+                    </div>
+
                     <div id="bar" class="d-flex">
                         <div class="col-9 d-flex justify-content-between px-4 py-2">
                             <span>U.S. Price: {{ $comic->price }}</span>
