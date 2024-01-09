@@ -16,11 +16,14 @@
                 <div class="col-9 p-0 pe-5">
                     <div class="d-flex justify-content-between">
                         <h2 class="pb-3">{{ $comic->title }}</h2>
-                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Remove</button>
-                        </form>
+                        <div>
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Remove</button>
+                            </form>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Edit Comic</a>
+                        </div>
                     </div>
 
                     <div id="bar" class="d-flex">
