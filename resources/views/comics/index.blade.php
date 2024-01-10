@@ -12,6 +12,14 @@
                 <div class="container alert alert-success">{{ session()->get('message') }}</div>
             @endif
             <div class="container d-flex justify-content-end">
+                <form action="{{ route('comics.index') }}" method="GET">
+                    <select name="search" id="search">
+                        <option value="">All</option>
+                        <option value="comic book">Comic Book</option>
+                        <option value="graphic novel">Graphic Novel</option>
+                    </select>
+                    <button type="submit" class="btn btn-danger mx-2">Search</button>
+                </form>
                 <a href="{{ route('comics.create') }}" class="btn btn-primary">New Comic</a>
             </div>
 

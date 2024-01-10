@@ -66,8 +66,8 @@
                             <div class="mb-3 mx-3">
                                 <label for="type" class="form-label">Type:</label>
                                 <select name="type" id="type" class="form-select" required>
-                                    <option value="comicBook">Comic Book</option>
-                                    <option value="graphicNovel">Graphic Novel</option>
+                                    <option value="comic book">Comic Book</option>
+                                    <option value="graphic novel">Graphic Novel</option>
                                 </select>
                             </div>
                             <div class="mb-3 mx-3">

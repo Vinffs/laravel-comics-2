@@ -47,10 +47,11 @@
                             <div class="mb-3 mx-3">
                                 <label for="type" class="form-label">Type:</label>
                                 <select name="type" id="type" class="form-select" required>
-                                    <option value="comicBook"
-                                        {{ old('type', $comic->type == 'comicBook' ? 'selected' : '') }}>Comic Book</option>
-                                    <option value="graphicNovel"
-                                        {{ old('type', $comic->type == 'graphicNovel' ? 'selected' : '') }}>Graphic Novel
+                                    <option value="comic book"
+                                        {{ old('type', $comic->type == 'comic book' ? 'selected' : '') }}>Comic Book
+                                    </option>
+                                    <option value="graphic novel"
+                                        {{ old('type', $comic->type == 'graphic novel' ? 'selected' : '') }}>Graphic Novel
                                     </option>
                                 </select>
                             </div>
