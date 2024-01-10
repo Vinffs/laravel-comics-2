@@ -28,3 +28,13 @@ oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD.
 
 ## Bonus 2:
 Aggiungere validazioni e messaggi di errore e alla cancellazione messaggio di conferma all'utente
+
+
+## Milestone 4
+sempre lavorando sulla repo di ieri, potete aggiungere le validazioni in modo da rendere più stabile il vostro gestionale di fumetti. <br>
+Validare gli input ricevuti in fase di creazione e modifica, rispondendo con errori chiari e in italiano. <br>
+
+## Bonus:
+- utilizzare le Request personalizzate per validare i dati
+- aggiungere conferma alla cancellazione degli elementi
+- aggiungere un filtro a vostra scelta per i dati dei comics
