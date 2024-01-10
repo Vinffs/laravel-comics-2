@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('thumb')->nullable();
             $table->string('price', 20);
             $table->date('sale_date');
-            $table->string('series', 30);
-            $table->string('type');
+            $table->string('series', 30)->default('Unknown');
+            $table->string('type')->default('Comic Book');
             $table->timestamps();
         });
     }
