@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Create a New Comic')
+@section('title', 'Edit a Comic')
 
 @section('content')
     <main>
