@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ComicController extends Controller
 {
@@ -35,16 +36,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+
         $formData = $request->all();
-        $newComic = new Comic();
-        $newComic->title = $formData['title'];
-        $newComic->description = $formData['description'];
-        $newComic->price = $formData['price'];
-        $newComic->series = $formData['series'];
-        $newComic->sale_date = $formData['sale_date'];
-        $newComic->type = $formData['type'];
-        $newComic->save();
-        return to_route('comics.index');
+        $newComic = Comic::create($formData);
+        return to_route('comics.index', $newComic->id);
     }
 
     /**
@@ -78,13 +74,7 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $formData = $request->all();
-        $comic->title = $formData['title'];
-        $comic->description = $formData['description'];
-        $comic->thumb = $formData['image'];
-        $comic->price = $formData['price'];
-        $comic->series = $formData['series'];
-        $comic->sale_date = $formData['sale_date'];
-        $comic->type = $formData['type'];
+        $comic->fill($formData);
         $comic->update();
         return to_route('comics.show', $comic->id);
     }
@@ -98,6 +88,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return to_route('comics.index')->with('message', "Comic $comic->title Has been successufully deleted");
+        return to_route('comics.index')->with('message', "Comic $comic->title has been successufully deleted");
     }
 }
